@@ -1,0 +1,12 @@
+SOURCE: https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
+
+
+# Getting started
+1. Start a new project and make sure the virtual environment is activated. // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\FlaskDemo>"
+2. pip install flask
+3. cd mysite // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\FlaskDemo\mysite>"
+4. Create mysite.py // Here's where the routes go
+5. set FLASK_APP=mysite.py // Specify flask app
+6. flask run //  Initiate application // Check out "http://127.0.0.1:5000/" OR "localhost:5000/"
+7. CTRL C // To stop running server
+To use HTML and CSS, create templates/myapp and static/myapp respectively.
