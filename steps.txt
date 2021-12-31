@@ -3,10 +3,34 @@ SOURCE: https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6O
 
 # Getting started
 1. Start a new project and make sure the virtual environment is activated. // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\FlaskDemo>"
-2. pip install flask
-3. cd mysite // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\FlaskDemo\mysite>"
-4. Create mysite.py // Here's where the routes go
-5. set FLASK_APP=mysite.py // Specify flask app
-6. flask run //  Initiate application // Check out "http://127.0.0.1:5000/" OR "localhost:5000/"
-7. CTRL C // To stop running server
-To use HTML and CSS, create templates/myapp and static/myapp respectively.
+2. pip install flask // Install other libraries as needed
+3. Create the following tree structure and code accordingly:
+mysite.py
+mysite
+|--- __init__.py
+|--- forms.py
+|--- models.py
+|--- routes.py
+|--- static
+     |--- *CSS Files*
+|--- templates
+     |--- *HTML Files*
+
+4. set FLASK_APP=mysite.py // Specify flask app
+5. flask run //  Initiate application // Check out "http://127.0.0.1:5000/" OR "localhost:5000/"
+6. CTRL C // To stop running server
+
+# Manually adding data to database
+from .mysite import db
+db.create_all()
+from mysite import User, Post
+user_1 = User(username="akshit", email="akshit@company.com", password="password")
+db.session.add(user_1)
+user_2 = User(username="user2", email="user2@company.com", password="password")
+db.session.add(user_2)
+# Commit changes to database
+db.session.commit()
+# Query all users
+User.query.all()
+# Filter users
+User.query.filter_by(username="akshit").first()
