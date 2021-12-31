@@ -17,8 +17,9 @@ mysite
      |--- *HTML Files*
 
 4. set FLASK_APP=mysite.py // Specify flask app
-5. flask run //  Initiate application // Check out "http://127.0.0.1:5000/" OR "localhost:5000/"
-6. CTRL C // To stop running server
+5. set FLASK_DEBUG=1 // Makes possible checking changes without restarting server
+6. flask run //  Initiate application. Check out "http://127.0.0.1:5000/" OR "localhost:5000/"
+7. CTRL C // To stop running server
 
 # Manually adding data to database
 from .mysite import db

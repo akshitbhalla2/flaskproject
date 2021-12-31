@@ -8,4 +8,4 @@ app.config["SECRET_KEY"] = 'd8eed0b0a295ca457ea8def492983b00'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
-from mysite import routes
+from mysite import routes, models
